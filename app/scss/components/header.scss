@@ -1,4 +1,4 @@
-@import 'general.scss';
+@import 'general';
 
 header {
     display: flex;
@@ -22,7 +22,7 @@ header {
     height: 72px;
     opacity: 1;
 
-    .logo {
+    .logo-sml {
         display: flex;
         margin-left: 100px;
       }
