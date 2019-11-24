@@ -33,15 +33,17 @@ header {
         margin-right: 100px;
 
         li {
-            font: $font-stack 400 14px;
+            font-family: $font-stack;
+            font-weight: 400;
+            font-size: 14px;
             letter-spacing: 0;
             color: #FFFFFF;
             opacity: 0.69;
             padding-left: 45px;
             cursor: pointer;
-          }
-      }
-  }
+        }
+    }
+}
   
 
   
