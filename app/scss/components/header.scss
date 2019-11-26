@@ -41,6 +41,9 @@ header {
             opacity: 0.69;
             padding-left: 45px;
             cursor: pointer;
+            &:hover {
+                opacity: 1;
+            }
         }
     }
 }
