@@ -1,5 +1,8 @@
-@import "general"
+@import "general";
 
 .soc-media-section {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
