@@ -1,32 +1,161 @@
 @import 'general';
 
 .features-section {
-    background-image: url('file:///Users/ingakut/Desktop/Front-end/Source/photo-1480714378408-67cf0d13bc1b.png');
-    width: 100%;
-    padding-top: 75px;
-    padding-bottom: 140px;
-    display: flex;
+	background-image: url('file:///Users/ingakut/Desktop/Front-end/Source/photo-1480714378408-67cf0d13bc1b.png');
+	background-size: cover;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	justify-content: center;
+	padding-top: 75px;
+	padding-bottom: 140px;
+	// width: 1400px;
+	max-width: 100%;
+	background-color: grey;
+}
 
-    .content-block {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        width: 1100px;
-        max-width: 1100px;
+.content-box {
+	display: flex;
+	flex-direction: column;
+	max-width: 650px;
+	width: 650px;
+	h1 {
+		font-size: 36px;
+		color: white;
+	}
+	svg {
+		width: 250px;
+		height: 107px;
+	}
+	.divider {
+		background: white;
+		height: 2px;
+		width: 80px;
+	}
+	p {
+		color: white;
+		font-size: 16px;
+		font-weight: 500;
+		opacity: 0.8;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	.download {
+		color: white;
+		width: 135px;
+		height: 45px;
+		border: 2px solid white;
+		text-align: center;
+		vertical-align: middle;
+		line-height: 45px;
+		margin-top: 20px;
+	}
+}
 
-        .text {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            width: 650px;
-            max-width: 650px;
-        }
+.subscribe {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: 260px;
+	height: 425px;
+	background-color: white;
+	border-radius: 5px;
+	margin-left: 90px;
+}
 
-        .subscribe {
-            display: flex;
-            width: 360px;
-            max-width: 360px;
-        }
-    }
+.header-title {
+	width: 360px;
+	height: 57px;
+	text-align: center;
+	vertical-align: middle;
+	position: absolute;
+	line-height: 57px;
+	z-index: 10;
+	background-color: #F5F5F5;
+	border-radius: 5px 5px 0px 0px;
+}
+
+.input-field {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	max-width: 260px;
+	width: 260px;
+	height: 311px;
+	background-color: white;
+	margin-top: 57px;
+	padding-top: 20px;
+	padding-left: 50px;
+	padding-right: 50px;
+	.form {
+		display: flex;
+		flex-direction: column;
+	}
+	.radio-buttons {
+		display: flex;
+		flex-direction: row;
+		.custom-radio {
+			display: flex;
+			flex-direction: row;
+			padding-right: 17px;
+			input {
+				display: none;
+			}
+			input:checked+label {
+				.radio-circle {
+					opacity: 1;
+					&:after {
+						opacity: 1;
+					}
+				}
+			}
+			label {
+				display: flex;
+				align-items: center;
+				cursor: pointer;
+				span {
+					margin-left: 8px;
+				}
+			}
+			.radio-circle {
+				position: relative;
+				width: 12px;
+				height: 12px;
+				border: 2px solid #41D395;
+				opacity: 0.5;
+				border-radius: 50%;
+				transition: 0.3s ease-in-out;
+				&:after {
+					content: '';
+					position: absolute;
+					width: 6px;
+					height: 6px;
+					background: #41D395;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					margin: auto;
+					border-radius: 50%;
+					transition: 0.3s ease-in-out;
+					opacity: 0;
+				}
+			}
+		}
+	}
+}
+
+.green-btn {
+	width: 360px;
+	height: 57px;
+	text-align: center;
+	vertical-align: middle;
+	position: absolute;
+	line-height: 57px;
+	margin-top: 368px;
+	z-index: 10;
+	background-color: #F5F5F5;
+	border-radius: 0px 0px 5px 5px;
+	border: 0px;
+	cursor: pointer;
 }
