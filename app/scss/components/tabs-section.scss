@@ -7,12 +7,17 @@
 	flex-direction: row;
 	align-items: center;
     justify-content: center;
+    position: relative;
     width: 100%;
     padding-top: 100px;
     padding-bottom: 100px;
-    // height: 400px;
-    // background: transparent linear-gradient(270deg, #6696E2 0%, #E27866 100%) 0% 0% no-repeat padding-box;
-    // opacity: 0.42;
+    .tabs-section-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: transparent linear-gradient(270deg, #6696E2 0%, #E27866 100%) 0% 0% no-repeat padding-box;
+        opacity: 0.42;
+    }
 }
 
 .square-btns {
@@ -20,8 +25,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    // position: relative;
     cursor: pointer;
+    z-index: 10;
     nav {
         background-color: #A37169;
         text-align: center;
@@ -55,6 +60,7 @@
     margin-left: 30px;
     margin-right: 70px;
     color: white;
+    z-index: 10;
     h1 {
         font-size: 36px;
         font-weight: 600;
@@ -77,6 +83,7 @@
     font-size: 20px;
     font-weight: 600;
     cursor: pointer;
+    z-index: 10;
     .small-two {
         display: flex;
         flex-direction: row;

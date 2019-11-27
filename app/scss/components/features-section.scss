@@ -1,7 +1,7 @@
 @import 'general';
 
 .features-section {
-	background-image: url('app/city.png');
+	background-image: url('images/city.png');
     background-size: cover;
 	display: flex;
 	flex-direction: row;
@@ -60,7 +60,8 @@
 		vertical-align: middle;
 		line-height: 45px;
 		margin-top: 20px;
-        cursor: pointer;
+		cursor: pointer;
+		transition: 0.3s ease-in-out;
     
         &:hover {
             color: grey;
@@ -211,7 +212,8 @@
     background-color: #41D395;
     border-radius: 0px 0px 5px 5px;
     border: 0px;
-    cursor: pointer;
+	cursor: pointer;
+	transition: 0.3s ease-in-out;
     
     &:hover {
       background-color: #1bd184; 
