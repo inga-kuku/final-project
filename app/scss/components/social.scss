@@ -41,17 +41,31 @@
     flex-direction: row;
     max-height: 30px;
     height: 30px;
-    span {
+
+    a {
         margin-left: 105px;
-        svg path {
-            fill: #E27866;
-            opacity: 0.63;
-            cursor: pointer;
-            &:hover {
+        padding: 20px;
+
+        &:hover {
+            span svg {
                 opacity: 1;
             }
         }
+    
+        span {
+            display: inline-block;
+            svg {
+                opacity: 0.63;
+                transition: 0.3s ease-in-out;
+            }
+            svg path {
+                fill: #E27866;
+            }
+        }
     }
+
+    
+
     // label {
     //     cursor: pointer;
     //     width: 100%;
