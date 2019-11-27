@@ -1,1 +1,58 @@
 @import "general";
+
+.awesome-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    h1 {
+        font-size: 36px;
+        font-weight: 400;
+        text-align: center;
+    }
+    .divider {
+        background-color: $primary-red;
+        height: 2px;
+        width: 65px;
+    }
+    p {
+        font-size: 14px;
+        color: #86878B;
+        font-weight: 200;
+        padding-top: 15px;
+    }
+}
+
+.badge-display {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 65px;
+    .design, .crafted, .customize {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 46px;
+        margin-right: 46px;
+        max-width: 286px;
+        p {
+            text-align: center;
+            margin: 0;
+        }
+        .circle-badge, .flower-badge, .visa-badge {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid $primary-red;
+        }
+    }
+    h3 {
+        font-size: 20px;
+        font-weight: 200;
+        margin-bottom: 27px;
+        margin-top: 35px;
+    }
+}
