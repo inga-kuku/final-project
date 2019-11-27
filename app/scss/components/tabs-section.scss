@@ -1,7 +1,7 @@
 @import 'general';
 
 .tabs-section {
-    background-image: url('file:///Users/ingakut/Desktop/Front-end/Source/christoffer-engstrom-503481-unsplash.png');
+    background-image: url('images/dunes.png');
     background-size: cover;
 	display: flex;
 	flex-direction: row;
@@ -31,12 +31,14 @@
         width: 100px;
         height: 100px;
         margin: 20px 40px 20px 0;
+        transition: 0.3s ease-in-out;
         &:hover {
             background-color: $primary-red;
         }
         p {
             transform: rotate(-45deg);
             opacity: 0.5;
+            transition: 0.3s ease-in-out;
             &:hover {
                 opacity: 1;
             }
@@ -97,6 +99,7 @@
     }
     p {
         opacity: 0;
+        transition: 0.3s ease-in-out;
         &:hover {
             opacity: 1;
         }

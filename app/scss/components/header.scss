@@ -36,13 +36,14 @@ header {
 
         li {
             font-family: $font-stack;
-            font-weight: 400;
+            font-weight: 200;
             font-size: 14px;
             letter-spacing: 0;
             color: #FFFFFF;
             opacity: 0.69;
             padding-left: 45px;
             cursor: pointer;
+            transition: 0.3s ease-in-out;
             &:hover {
                 opacity: 1;
             }
