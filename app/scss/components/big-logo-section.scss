@@ -30,20 +30,21 @@
     h1 {
         color: white;
         font-size: 30px;
-        font-weight: 700;
+        font-weight: 400;
     }
     .divider {
-        width: 100px;
+        width: 200px;
         height: 2px;
         background-color: $primary-red;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 10px;
+        margin-bottom: 30px;
     }
     .text p {
         color: white;
         font-size: 14px;
         line-height: 20px;
         font-weight: 200;
+        margin-top: 0;
     }
 }
 
@@ -59,15 +60,27 @@
         color: white;
         font-size: 14px;
         line-height: 20px;
-        font-weight: 400; 
+        font-weight: 400;
+        margin-bottom: 5px; 
     }
     .icon {
+        position: relative;
         background-color: $primary-red;
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        margin-right: 10px;
+        margin-right: 20px;
         margin-top: 10px;
+        svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto; 
+            fill: #ffffff;
+            height: 18pxl
+        }
     }
     text {
         width: 395px;
