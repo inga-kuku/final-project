@@ -11,6 +11,11 @@
     h1 {
         color: white;
     }
+    p {
+        color:white;
+        font-size: 14px;
+        font-weight: 200;
+    }
 }
   
 .subscribe2 {
@@ -109,5 +114,14 @@
                 }
             }
         }
+    }
+    .green-btn2 {
+        width: 160px;
+        height: 48px;
+        border-radius: 5px;
+        background-color: $primary-green;
+        color: white;
+        font-size: 15px;
+        font-weight: 500;
     }
 }
