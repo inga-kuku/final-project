@@ -15,7 +15,7 @@
     }
 }
   
-.subscribe {
+.subscribe2 {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -28,7 +28,7 @@
     z-index: 10;
 }
   
-.input-field {
+.input-field2 {
     display: flex;
     flex-direction: column;
     padding: 30px 75px 40px 75px;
@@ -38,7 +38,7 @@
     right: 0;
     bottom: 0;
     margin: auto;
-    .form {
+    .form2 {
         display: flex;
         flex-direction: column;
         padding-bottom: 25px;
@@ -57,11 +57,11 @@
             color: #D8D8D8;
         }
     }
-    .radio-buttons {
+    .radio-buttons2 {
         display: flex;
         flex-direction: row;
         padding-top: 10px;
-        .custom-radio {
+        .custom-radio2 {
             display: flex;
             flex-direction: row;
             padding-right: 17px;
@@ -69,7 +69,7 @@
                 display: none;
             }
             input:checked+label {
-                .radio-circle {
+                .radio-circle2 {
                     opacity: 1;
                     &:after {
                         opacity: 1;
@@ -86,7 +86,7 @@
                     opacity: 0.5;
                 }
             }
-            .radio-circle {
+            .radio-circle2 {
                 position: relative;
                 width: 12px;
                 height: 12px;
