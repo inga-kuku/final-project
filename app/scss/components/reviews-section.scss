@@ -1,2 +1,83 @@
 @import "general";
 
+.reviews-section {
+    background-color: white;
+    color: $text-black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .divider {
+        width: 65px;
+        height: 2px;
+        background-color: $primary-blue;
+    }
+}
+
+.reviews-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    .review-block {
+        display: flex;
+        flex-direction: column;
+        margin-left: 60px;
+        margin-right: 60px;
+        margin-top: 60px;
+        .text-box {
+            position: relative;
+            background-color: $primary-blue;
+            border-radius: 5px;
+            width: 244px;
+            padding: 18px;
+            p {
+                margin: 0;
+                color: white;
+                font-size: 16px;
+                font-weight: 200;
+                line-height: 22px;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                margin-left: 18px;
+                bottom: 0;
+                width: 20px;
+                height: 20px;
+                background-color: $primary-blue;
+                transform: translateY(50%) translateX(-50%) rotate(45deg);
+            }
+        }
+        .profile {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: 25px;
+            .head-bubble {
+                background-color: $primary-red;
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                margin-right: 13px;
+            }
+            .name-surname {
+                text-align: left;
+                h3 {
+                    font-size: 20px;
+                    font-weight: 200;
+                    color: $text-black;
+                    margin: 0;
+                }
+                p {
+                    font-size: 14px;
+                    font-weight: 200;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
