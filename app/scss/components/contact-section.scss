@@ -1,0 +1,115 @@
+@import "general";
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $primary-red;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    h1 {
+        color: white;
+        font-size: 36px;
+        font-weight: 600;
+    }
+}
+  
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 390px;
+    height: 315px;
+    margin-top: 30px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 5px 6px #00000029;
+    z-index: 10;
+}
+  
+.input-field {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 75px 40px 75px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    .form {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 25px;
+        input {
+            outline-style: none;
+            padding-top: 20px;
+            padding-bottom: 5px;
+            padding-left: 10px;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            border-bottom: 1px solid #D8D8D8;
+        }
+        ::-webkit-input-placeholder {
+            font-size: 12px;
+            color: #D8D8D8;
+        }
+    }
+    .radio-buttons {
+        display: flex;
+        flex-direction: row;
+        padding-top: 10px;
+        .custom-radio {
+            display: flex;
+            flex-direction: row;
+            padding-right: 17px;
+            input {
+                display: none;
+            }
+            input:checked+label {
+                .radio-circle {
+                    opacity: 1;
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+            }
+            label {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                span { // opacity: 1; kai checked
+                    margin-left: 8px;
+                    font-size: 9px;
+                    opacity: 0.5;
+                }
+            }
+            .radio-circle {
+                position: relative;
+                width: 12px;
+                height: 12px;
+                border: 2px solid #41D395;
+                opacity: 0.5;
+                border-radius: 50%;
+                transition: 0.3s ease-in-out;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 6px;
+                    height: 6px;
+                    background: #41D395;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    margin: auto;
+                    border-radius: 50%;
+                    transition: 0.3s ease-in-out;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
