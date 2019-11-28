@@ -1,5 +1,31 @@
 @import "general";
 
 footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    padding-top: 55px;
+    padding-bottom: 55px;
     background-color: $text-black;
+    p {
+        font-size: 18px;
+        font-weight: 200;
+        text-align: right;
+        color: white;
+        opacity: 0.5;
+    }
+    .icons-area {
+        a {
+            margin-right: 90px;
+            margin-left: 0;
+            &:last-of-type {
+                margin-right: 360px;
+            }
+            span svg {
+                height: 20px;
+                opacity: 1;
+            }
+        }
+    }
 }
