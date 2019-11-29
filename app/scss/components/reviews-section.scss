@@ -58,11 +58,23 @@
             justify-content: flex-start;
             margin-top: 25px;
             .head-bubble {
-                background-color: $primary-red;
+                flex-shrink: 0;
+                position: relative;
                 width: 70px;
                 height: 70px;
                 border-radius: 50%;
+                background-size: cover;
+                box-shadow: 0px 1px 3px $text-black;
                 margin-right: 13px;
+            }
+            .left {
+                background-image: url('images/profile-icon.png');
+            }
+            .middle {
+                background-image: url('images/profile-icon-2.png');
+            }
+            .right {
+                background-image: url('images/profile-icon-3.png');
             }
             .name-surname {
                 text-align: left;
