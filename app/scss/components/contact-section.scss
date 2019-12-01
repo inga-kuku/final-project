@@ -17,6 +17,16 @@
         font-weight: 200;
     }
 }
+
+@media (max-width: 1100px) {
+    .contact-section {
+        padding-top: 75px;
+        padding-bottom: 75px;
+        h1 {
+            font-size: 28px;
+        }
+    }
+}
   
 .subscribe2 {
     display: flex;
