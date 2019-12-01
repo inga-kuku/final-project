@@ -54,6 +54,9 @@ header {
                 &:hover {
                     opacity: 1;
                 }
+                // &:target {
+                //     opacity: 1;
+                // }
                 &:after {
                     content: '';
                     position: absolute;
