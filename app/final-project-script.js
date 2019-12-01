@@ -2,15 +2,15 @@
 
 var mySwiper = new Swiper ('.swiper-container', {
     direction: 'horizontal',
-    loop: true,
+    loop: false,
     slidesPerView: 3,
     spaceBetween: 120,
     autoplay: {
-      delay: 1000,
-      disableOnInteraction: true,
+        delay: 1000,
+        disableOnInteraction: true,
     },
     breakpoints: {
-      1100: {
+        1100: {
         slidesPerView: 2,
       },
     },
@@ -19,7 +19,11 @@ var mySwiper = new Swiper ('.swiper-container', {
         clickable: true,
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
   })
+
+
+  var element = document.getElementById('pricing');
+    element.scrollIntoView({behaviour: "smooth", block: "start", inline: "nearest"});
