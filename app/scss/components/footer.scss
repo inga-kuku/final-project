@@ -48,6 +48,7 @@ footer {
 @media (max-width: 600px) {
     footer {
         .icons-area {
+            justify-content: center;
             a {
                 margin-right: 45px;
                 &:last-of-type {
