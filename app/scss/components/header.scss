@@ -29,7 +29,7 @@ header {
         cursor: pointer;
       }
       
-    .meniu {
+    .desktop-meniu {
         display: flex;
         flex-direction: row;
         align-items: flex-end;
@@ -76,5 +76,7 @@ header {
     }
 }
   
+@media (max-width: 1000px) {
 
+}
   
