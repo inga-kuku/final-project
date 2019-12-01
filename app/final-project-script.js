@@ -11,8 +11,11 @@ var mySwiper = new Swiper ('.swiper-container', {
     },
     breakpoints: {
       1100: {
-        slidesPerView: 3
+        slidesPerView: 2,
       },
+    },
+    pagination: {
+        el: '.swiper-pagination',
     },
     navigation: {
       nextEl: '.swiper-button-next',
