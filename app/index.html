@@ -5,9 +5,12 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500,600,700,800&display=swap" rel="stylesheet">
         <title>Projektas</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="path/to/swiper.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     </head>
     <body>
-        
+        <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+        <script src="final-project-script.js"></script>
         <header>
             <nav class='top-bar'>
                 <div class='logo-sml'>
@@ -309,8 +312,9 @@
         <section class='reviews-section'>
             <h1>WHAT OUR CUSTOMERS ARE SAYING</h1>
             <div class='divider'></div>
-            <div class='reviews-container'>
-                <div class='review-block'>
+            <div class='swiper-container reviews-container'>
+                <div class='swiper-wrapper'>
+                    <div class='swiper-slide review-block'>
                     <div class='text-box'>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex.</p>
                     </div>
@@ -321,8 +325,8 @@
                             <p>Manager</p>
                         </div>
                     </div>
-                </div>
-                <div class='review-block'>
+                    </div>
+                    <div class='swiper-slide review-block'>
                     <div class='text-box'>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita.</p>
                     </div>
@@ -333,8 +337,8 @@
                             <p>Freelancer</p>
                         </div>
                     </div>
-                </div>
-                <div class='review-block'>
+                    </div>
+                    <div class='swiper-slide review-block'>
                     <div class='text-box'>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex.</p>
                     </div>
@@ -345,7 +349,47 @@
                             <p>Photographer</p>
                         </div>
                     </div>
+                    </div>
+                    <div class='swiper-slide review-block'>
+                    <div class='text-box'>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex.</p>
+                    </div>
+                    <div class='profile'>
+                        <div class='head-bubble left'></div>
+                        <div class='name-surname'>
+                            <h3>Jeremy H.</h3>
+                            <p>Manager</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class='swiper-slide review-block'>
+                    <div class='text-box'>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita.</p>
+                    </div>
+                    <div class='profile'>
+                        <div class='head-bubble middle'></div>
+                        <div class='name-surname'>
+                            <h3>John S.</h3>
+                            <p>Freelancer</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class='swiper-slide review-block'>
+                    <div class='text-box'>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex.</p>
+                    </div>
+                    <div class='profile'>
+                        <div class='head-bubble right'></div>
+                        <div class='name-surname'>
+                            <h3>Susan W.</h3>
+                            <p>Photographer</p>
+                        </div>
+                    </div>
+                    </div>
                 </div>
+                <div class='swiper-button-prev'></div>
+                <div class='swiper-button-next'></div>
+                <div class='swiper-scrollbar'></div>
             </div>
         </section>
         <section class='contact-section'>
