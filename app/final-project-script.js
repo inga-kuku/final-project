@@ -2,62 +2,68 @@
 
 
 // -- swiper gallery, reviews section --
-var mySwiper = new Swiper ('.swiper-container', {
-    direction: 'horizontal',
-    loop: true,
-    slidesPerView: 3,
-    spaceBetween: 120,
-    autoplay: {
-        delay: 1000,
-        disableOnInteraction: true,
-    },
-    breakpoints: {
-        1100: {
-        slidesPerView: 2,
-      },
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-});
-
-
-// -- scroll into view, header funkcija --
-document.addEventListener('click', function(e) {
-    console.log(e.target.hash);
-    // If it isn't an anchor element, don't even bother...
-    if (e.target.className !== 'scroll') return;
-
-    document.querySelector('.scroll').classList.remove('active');
-    console.log(this);
-    // this.classList.add('active');
-
-    document.getElementById(e.target.hash).scrollIntoView({ 
-        behavior: 'smooth' 
+window.onload = function () {
+    var mySwiper = new Swiper ('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 120,
+        autoplay: {
+            delay: 1000,
+            disableOnInteraction: true,
+        },
+        breakpoints: {
+            1100: {
+            slidesPerView: 2,
+        },
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
     });
-  });
-
-
-// -- js validation for inputs -- 
-var name = document.getElementById('first-name');
-var lastName = document.getElementById('last-name');
-var phone = document.getElementById('phone-number');
-var btn = document.getElementById('green-btn');
-
-phone = Number(phone)
-
-btn.addEventListener ('click', function () {
-    if (name.value != '' && lastName.value != '' && phone.value != '') {
-        name.value = '';
-        lastName.value = '';
-        phone.value = '';
-    }
-    else {
-        alert('Please fill in the form.');
-    }
-});
+​
+// -- scroll into view, header funkcija --
+let anchorlinks = document.querySelectorAll('.scroll')
+ 
+for (let item of anchorlinks) { 
+    
+    item.addEventListener('click', (e)=> {
+        var elems = document.querySelectorAll(".active");
+        [].forEach.call(elems, function(el) {
+            el.classList.remove("active");
+        });
+        e.target.className = "active";
+        anchorlinks.classList
+        let hashval = item.getAttribute('href')
+        let target = document.querySelector(hashval)
+        target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        })
+        history.pushState(null, null, hashval)
+        e.preventDefault()
+    })
+}
+​
+    // -- js validation for inputs -- 
+    var name = document.getElementById('first-name');
+    var lastName = document.getElementById('last-name');
+    var phone = document.getElementById('phone-number');
+    var btn = document.getElementById('green-btn');
+​
+    btn.addEventListener ('click', function () {
+        if (name.value != '' && lastName.value != '' && phone.value != '') {
+            name.value = '';
+            lastName.value = '';
+            phone.value = null;
+        }
+        else {
+            alert('Please fill in the form.');
+        }
+    });
+}

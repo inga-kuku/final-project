@@ -52,7 +52,7 @@ header {
                 opacity: 0.69;
                 transition: 0.3s ease-in-out;
                 &.active {
-                    color: red;
+                    opacity: 1;
                 }
                 &:hover {
                     opacity: 1;
@@ -72,7 +72,7 @@ header {
                     opacity: 0;
                     transition: 0.3s ease-in-out;
                 }
-                &:hover:after {
+                &.active:after, &:hover:after {
                     opacity: 1;
                 }
             }
@@ -139,7 +139,6 @@ header {
         }
     }
 }
-
 @media (max-width: 1100px) {
     .top-bar {
         .logo-sml {
