@@ -61,14 +61,14 @@
                   <text>Type of subscription</text>
                   <span class='radio-buttons'>
                         <div class="custom-radio">
-                            <input type="radio" id="radio_1" name="radio-label" value="1">
+                            <input type="radio" id="radio_1" name="radio-label" value="1" onclick="clearchk()">
                             <label for="radio_1">
                                 <div class="radio-circle"></div>
                                 <span>MONTHLY</span>
                             </label>
                         </div>
                         <div class="custom-radio">
-                            <input type="radio" id="radio_2" name="radio-label" value="2">
+                            <input type="radio" id="radio_2" name="radio-label" value="2" onclick="clearchk()">
                             <label for="radio_2">
                                 <div class="radio-circle"></div>
                                 <span>YEARLY</span>
@@ -312,40 +312,40 @@
             <div class='swiper-container'>
                 <div class='swiper-wrapper'>
                     <div class='swiper-slide'>
-                    <div class='text-box'>
+                        <div class='text-box'>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex.</p>
-                    </div>
-                    <div class='profile'>
+                        </div>
+                        <div class='profile'>
                         <div class='head-bubble left'></div>
                         <div class='name-surname'>
                             <h3>Jeremy H.</h3>
                             <p>Manager</p>
                         </div>
-                    </div>
+                        </div>
                     </div>
                     <div class='swiper-slide'>
-                    <div class='text-box'>
+                        <div class='text-box'>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita.</p>
-                    </div>
-                    <div class='profile'>
+                        </div>
+                        <div class='profile'>
                         <div class='head-bubble middle'></div>
                         <div class='name-surname'>
                             <h3>John S.</h3>
                             <p>Freelancer</p>
                         </div>
-                    </div>
+                        </div>
                     </div>
                     <div class='swiper-slide'>
-                    <div class='text-box'>
+                        <div class='text-box'>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex.</p>
-                    </div>
-                    <div class='profile'>
+                        </div>
+                        <div class='profile'>
                         <div class='head-bubble right'></div>
                         <div class='name-surname'>
                             <h3>Susan W.</h3>
                             <p>Photographer</p>
                         </div>
-                    </div>
+                        </div>
                     </div>
                     <div class='swiper-slide'>
                     <div class='text-box'>
@@ -386,7 +386,7 @@
                 </div>
                 <div class='swiper-button-prev'></div>
                 <div class='swiper-button-next'></div>
-                <div class='swiper-pagination'></div>
+                <div class="swiper-pagination"></div>
             </div>
         </section>
         <section class='contact-section' id='contact'>
@@ -419,7 +419,7 @@
                         </div>
                     </span>
                 </span>
-                <button class='green-btn2'>SEND</button>
+                <button class='green-btn2' id='green-btn2'>SEND</button>
             </section>
         </section>
         <footer id='footer'>
