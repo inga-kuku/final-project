@@ -19,7 +19,7 @@ window.onload = function () {
             },
             350: {
                 slidesPerView: 1,
-                spaceBetween: 0,
+                spaceBetween: 20,
             },
         },
         pagination: {
