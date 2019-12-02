@@ -28,13 +28,19 @@ var mySwiper = new Swiper ('.swiper-container', {
 
 
 // -- scroll into view, header funkcija --
-function scroll(e) {
-    e.scrollIntoView({behaviour: "smooth", block: "start", inline: "nearest"});
-}
+document.addEventListener('click', function(e) {
+    console.log(e.target.hash);
+    // If it isn't an anchor element, don't even bother...
+    if (e.target.className !== 'scroll') return;
 
-document.querySelectorAll('.scroll').forEach((element) => {
-    element.addEventListener('click', scroll);
-});
+    document.querySelector('.scroll').classList.remove('active');
+    console.log(this);
+    // this.classList.add('active');
+
+    document.getElementById(e.target.hash).scrollIntoView({ 
+        behavior: 'smooth' 
+    });
+  });
 
 
 // -- js validation for inputs -- 
@@ -42,15 +48,16 @@ var name = document.getElementById('first-name');
 var lastName = document.getElementById('last-name');
 var phone = document.getElementById('phone-number');
 var btn = document.getElementById('green-btn');
-do {
-    phone = Number(phone);
-}
+
+phone = Number(phone)
 
 btn.addEventListener ('click', function () {
-    if (name.value && lastName.value && phone.value); {
-        value = '';
+    if (name.value != '' && lastName.value != '' && phone.value != '') {
+        name.value = '';
+        lastName.value = '';
+        phone.value = '';
     }
     else {
         alert('Please fill in the form.');
     }
-})
+});

@@ -6,6 +6,9 @@ $hover-green: #04bb6d;
 $primary-blue: #6696E2;
 $text-black: #333333;
 
+html {
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
     font-family: $font-stack;
