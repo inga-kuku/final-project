@@ -1,6 +1,26 @@
 'use strict';
 
 
+// -- tabs switch on square buttons --
+
+    // var squareReg = document.getElementById('square-1');
+    // var squareApp = document.getElementById('square-2');
+    // var squareRec = document.getElementById('square-3');
+
+    let squareBtns = document.querySelectorAll('.btn');
+
+    var regContent = document.getElementById('description-register');
+    var appContent = document.getElementById('description-apply');
+    var recContent = document.getElementById('description-receive');
+
+    squareBtns.addEventListener('click', function () {
+        if (squareBtns.style.display === "none") {
+        squareBtns.style.display = "block";
+        } else {
+        squareBtns.style.display = "none";
+        }
+    });
+
 // -- swiper gallery, reviews section --
 window.onload = function () {
     var mySwiper = new Swiper('.swiper-container', {
