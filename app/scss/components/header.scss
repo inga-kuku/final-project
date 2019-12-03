@@ -43,7 +43,6 @@ header {
                 justify-content: flex-end;
                 position: relative;
                 margin-left: 45px;
-                // padding-bottom: 43px;
                 font-family: $font-stack;
                 font-weight: 200;
                 font-size: 14px;
@@ -57,9 +56,6 @@ header {
                 &:hover {
                     opacity: 1;
                 }
-                // &:target {
-                //     opacity: 1;
-                // }
                 &:after {
                     content: '';
                     position: absolute;
@@ -87,10 +83,13 @@ header {
         &:checked + .mobile-label .menu-close {
             display: block;
         }
-        &:checked ~ .mobile-menu {
+        &:checked ~ .mobile-menu { // tilde, surenka sibling elementus
             opacity: 1;
             visibility: visible;
         }
+        // &:checked + .mobile-menu a.active ~ .mobile-menu {
+        //     visibility: hidden;
+        // }
     }
     .mobile-menu {
         position: fixed;
@@ -108,17 +107,22 @@ header {
         visibility: hidden;
         transition: 0.3s ease-in-out;
         li {
+            margin-bottom: 45px;
+            padding-right: 30px;
             a {
+                opacity: 0.69;
                 text-decoration: none;
-                margin-bottom: 45px;
-                padding-right: 30px;
                 font-size: 14px;
                 font-family: $font-stack;
                 color: #fff;
                 font-weight: 200;
+                &:focus {
+                    opacity: 1;
+                }
             }
         }
     }
+
     .mobile-label {
         position: absolute;
         top: 0;

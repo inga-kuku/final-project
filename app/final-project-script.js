@@ -4,26 +4,26 @@ window.onload = function () {
 
     // -- tabs switch on square buttons --
 
-    let squareBtns = document.querySelectorAll('.square-btns input');
+    let squareBtns = document.querySelectorAll('.square-btns input'); 
     let tabGallery = document.querySelectorAll('.tabGallery');
     let tabText = document.querySelectorAll('.tabText');
 
-    for (let sqrItem of squareBtns) {
+    for (let sqrItem of squareBtns) { // 
         sqrItem.addEventListener('click', function (e) {
         
-            [].forEach.call(tabText, function (el) {
-                el.classList.remove("on");
+            [].forEach.call(tabText, function (el) { //
+                el.classList.remove("on"); // on funkcija is html
             });
-            [].forEach.call(tabGallery, function (el) {
+            [].forEach.call(tabGallery, function (el) { // ciklas pereina ir nuima
                 el.classList.remove("on");
             });
 
             e.target.className = "on";
-            let getID = sqrItem.getAttribute('id');
+            let getID = sqrItem.getAttribute('id'); // priskiri kad galetum idet i funkcija
         
-            let idGroup = document.querySelectorAll('.'+getID);
-            [].forEach.call(idGroup, function (el) {
-                el.classList.add("on");
+            let idGroup = document.querySelectorAll('.'+getID); // input id prsikirta galerijai klasei ir desciption
+            [].forEach.call(idGroup, function (el) { 
+                el.classList.add("on"); // abiem blokam uzdedam, nes jie yra du for each group
             });
     
     });
@@ -80,7 +80,8 @@ window.onload = function () {
                 behavior: 'smooth',
                 block: 'start'
             })
-            history.pushState(null, null, hashval)
+            // document.getElementById('mobileMenu').style.display = 'none';
+            // document.getElementById('menuClose').style.display = 'none';
             e.preventDefault()
         })
     }
@@ -119,8 +120,8 @@ window.onload = function () {
             name2.value = '';
             lastName2.value = '';
             phone2.value = null;
-            radio = false;
-            radioRadio = false;
+            radio.checked = false;
+            radioRadio.checked = false;
         }
         else {
             alert('Please fill in the form.');
