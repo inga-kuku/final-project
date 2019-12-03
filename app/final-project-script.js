@@ -1,28 +1,36 @@
 'use strict';
 
-
-// -- tabs switch on square buttons --
-
-    // var squareReg = document.getElementById('square-1');
-    // var squareApp = document.getElementById('square-2');
-    // var squareRec = document.getElementById('square-3');
-
-    let squareBtns = document.querySelectorAll('.btn');
-
-    var regContent = document.getElementById('description-register');
-    var appContent = document.getElementById('description-apply');
-    var recContent = document.getElementById('description-receive');
-
-    squareBtns.addEventListener('click', function () {
-        if (squareBtns.style.display === "none") {
-        squareBtns.style.display = "block";
-        } else {
-        squareBtns.style.display = "none";
-        }
-    });
-
-// -- swiper gallery, reviews section --
 window.onload = function () {
+
+    // -- tabs switch on square buttons --
+
+    let squareBtns = document.querySelectorAll('.square-btns input');
+    let tabGallery = document.querySelectorAll('.tabGallery');
+    let tabText = document.querySelectorAll('.tabText');
+
+    for (let sqrItem of squareBtns) {
+        sqrItem.addEventListener('click', function (e) {
+        
+            [].forEach.call(tabText, function (el) {
+                el.classList.remove("on");
+            });
+            [].forEach.call(tabGallery, function (el) {
+                el.classList.remove("on");
+            });
+
+            e.target.className = "on";
+            let getID = sqrItem.getAttribute('id');
+        
+            let idGroup = document.querySelectorAll('.'+getID);
+            [].forEach.call(idGroup, function (el) {
+                el.classList.add("on");
+            });
+    
+    });
+};
+
+    // -- swiper gallery, reviews section --
+
     var mySwiper = new Swiper('.swiper-container', {
         direction: 'horizontal',
         loop: true,
@@ -54,6 +62,7 @@ window.onload = function () {
 
 
     // -- scroll into view, header funkcija --
+
     let anchorlinks = document.querySelectorAll('.scroll')
 
     for (let item of anchorlinks) {
@@ -77,6 +86,7 @@ window.onload = function () {
     }
 
     // -- js validation for top form -- 
+
     var name = document.getElementById('first-name');
     var lastName = document.getElementById('last-name');
     var phone = document.getElementById('phone-number');
@@ -96,6 +106,7 @@ window.onload = function () {
     });
 
     // -- js validation for bottom form --
+
     var name2 = document.getElementById('first-name2');
     var lastName2 = document.getElementById('last-name2');
     var phone2 = document.getElementById('phone-number2');
